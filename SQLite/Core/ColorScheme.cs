@@ -1,4 +1,4 @@
-﻿namespace MaterialDesignDemo
+﻿namespace SQLiteTool
 {
     enum ColorScheme
     {

@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Windows.Input;
 using System.Windows.Media;
 using CommunityToolkit.Mvvm.ComponentModel;
 using MaterialDesignColors;
 using MaterialDesignThemes.Wpf;
-using SQLiteTool.ViewModels;
 
-namespace MaterialDesignDemo.Domain
+
+namespace SQLiteTool.ViewModels
 {
     internal class ColorToolViewModel : ObservableObject
     {
@@ -162,15 +161,15 @@ namespace MaterialDesignDemo.Domain
             if (ActiveScheme == ColorScheme.Primary)
             {
                 var theme = _paletteHelper.GetTheme();
-                theme.SetPrimaryColor(color);
-             
+                theme.SetPrimaryColor(hue);
+
                 _primaryColor = hue;
                 _primaryForegroundColor = _paletteHelper.GetTheme().PrimaryMid.GetForegroundColor();
             }
             else if (ActiveScheme == ColorScheme.Secondary)
             {
                 var theme = _paletteHelper.GetTheme();
-                theme.SetSecondaryColor(color);
+                theme.SetSecondaryColor(hue);
                 _secondaryColor = hue;
                 _secondaryForegroundColor = _paletteHelper.GetTheme().SecondaryMid.GetForegroundColor();
             }

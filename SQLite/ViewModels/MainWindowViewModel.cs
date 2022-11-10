@@ -6,6 +6,7 @@ using System.Windows.Data;
 using CommunityToolkit.Mvvm.ComponentModel;
 using MaterialDesignThemes.Wpf;
 using System.Linq;
+using SQLiteTool.Views;
 
 namespace SQLiteTool.ViewModels;
 
@@ -91,18 +92,11 @@ public class MainWindowViewModel : ObservableObject
         //        DocumentationLink.ApiLink<PaletteHelper>()
         //    });
 
-        //yield return new ToolItem(
-        //    "Color Tool",
-        //    typeof(ColorTool),
-        //    new[]
-        //    {
-        //        DocumentationLink.WikiLink("Brush-Names", "Brushes"),
-        //        DocumentationLink.WikiLink("Custom-Palette-Hues", "Custom Palettes"),
-        //        DocumentationLink.WikiLink("Swatches-and-Recommended-Colors", "Swatches"),
-        //        DocumentationLink.DemoPageLink<ColorTool>("Demo View"),
-        //        DocumentationLink.DemoPageLink<ColorToolViewModel>("Demo View Model"),
-        //        DocumentationLink.ApiLink<PaletteHelper>()
-        //    });
+        yield return new ToolItem(
+            "Color Tool",
+            typeof(ColorTool),
+            null
+            );
 
         //yield return new ToolItem(
         //    "Buttons",

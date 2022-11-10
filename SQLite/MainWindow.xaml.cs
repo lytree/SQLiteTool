@@ -1,4 +1,5 @@
-﻿using SQLiteTool.ViewModels;
+﻿using MaterialDesignThemes.Wpf;
+using SQLiteTool.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -51,6 +52,26 @@ namespace SQLite
                 }
             }
         }
-        
+        private void MenuToggleButton_OnClick(object sender, RoutedEventArgs e)
+            => ItemsToolListBox.Focus();
+        private void MenuDarkModeButton_Click(object sender, RoutedEventArgs e)
+            => ModifyTheme(DarkModeToggleButton.IsChecked == true);
+
+        private void FlowDirectionButton_Click(object sender, RoutedEventArgs e)
+            => FlowDirection = FlowDirectionToggleButton.IsChecked.GetValueOrDefault(false)
+                ? FlowDirection.RightToLeft
+                : FlowDirection.LeftToRight;
+
+        private static void ModifyTheme(bool isDarkTheme)
+        {
+            var paletteHelper = new PaletteHelper();
+            var theme = paletteHelper.GetTheme();
+
+            theme.SetBaseTheme(isDarkTheme ? Theme.Dark : Theme.Light);
+            paletteHelper.SetTheme(theme);
+        }
+
+        private void OnSelectedItemChanged(object sender, DependencyPropertyChangedEventArgs e)
+            => MainScrollViewer.ScrollToHome();
     }
 }
