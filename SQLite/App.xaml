@@ -6,7 +6,7 @@
              xmlns:smtx="clr-namespace:ShowMeTheXAML;assembly=ShowMeTheXAML"
              xmlns:smtxAe="clr-namespace:ShowMeTheXAML.AvalonEdit;assembly=ShowMeTheXAML.AvalonEdit"
              xmlns:system="clr-namespace:System;assembly=mscorlib"
-             xmlns:core="clr-namespace:SQLiteTool.Core"
+             xmlns:help="clr-namespace:SQLiteTool.Help"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
@@ -61,7 +61,7 @@
                                          Padding="10"
                                          HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                                         DockPanel.Dock="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(core:XamlDisplayEx.ButtonDock)}"
+                                         DockPanel.Dock="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(help:XamlDisplayEx.ButtonDock)}"
                                          IsTabStop="False"
                                          StaysOpen="True">
                                     <materialDesign:PopupBox.ToggleContent>
@@ -122,7 +122,7 @@
                     </Setter.Value>
                 </Setter>
                 <Setter Property="VerticalContentAlignment" Value="Bottom" />
-                <Setter Property="core:XamlDisplayEx.ButtonDock" Value="Right" />
+                <Setter Property="help:XamlDisplayEx.ButtonDock" Value="Right" />
             </Style>
         </ResourceDictionary>
     </Application.Resources>

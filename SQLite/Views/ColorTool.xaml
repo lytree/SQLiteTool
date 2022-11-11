@@ -4,7 +4,7 @@
              xmlns:converters="clr-namespace:SQLiteTool.Converters"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:viewModels="clr-namespace:SQLiteTool.ViewModels"
-             xmlns:core="clr-namespace:SQLiteTool.Core"
+             xmlns:help="clr-namespace:SQLiteTool.Help"
              xmlns:local="clr-namespace:SQLiteTool.Views"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:materialDesignColors="clr-namespace:MaterialDesignColors;assembly=MaterialDesignColors"
@@ -53,7 +53,7 @@
                             <Setter Property="BorderThickness" Value="0" />
                             <Setter Property="Margin" Value="1,1,0,0" />
                             <Setter Property="Tag" Value="0" />
-                            <Setter Property="core:ButtonAssist.UniformCornerRadius" Value="0" />
+                            <Setter Property="help:ButtonAssist.UniformCornerRadius" Value="0" />
                             <Setter Property="materialDesign:ElevationAssist.Elevation" Value="Dp0" />
                             <Setter Property="materialDesign:RippleAssist.IsDisabled" Value="True" />
                             <Style.Triggers>
@@ -61,7 +61,7 @@
                                     <Trigger.EnterActions>
                                         <BeginStoryboard>
                                             <Storyboard>
-                                                <DoubleAnimation Storyboard.TargetProperty="(core:ButtonAssist.UniformCornerRadius)"
+                                                <DoubleAnimation Storyboard.TargetProperty="(help:ButtonAssist.UniformCornerRadius)"
                                          To="8"
                                          Duration="0:0:0.18" />
                                             </Storyboard>
@@ -71,7 +71,7 @@
                                     <Trigger.ExitActions>
                                         <BeginStoryboard>
                                             <Storyboard>
-                                                <DoubleAnimation Storyboard.TargetProperty="(core:ButtonAssist.UniformCornerRadius)"
+                                                <DoubleAnimation Storyboard.TargetProperty="(help:ButtonAssist.UniformCornerRadius)"
                                          From="8"
                                          Duration="0:0:0.18" />
                                             </Storyboard>
@@ -92,7 +92,7 @@
                                     <DataTrigger.EnterActions>
                                         <BeginStoryboard>
                                             <Storyboard>
-                                                <DoubleAnimation Storyboard.TargetProperty="(core:ButtonAssist.UniformCornerRadius)"
+                                                <DoubleAnimation Storyboard.TargetProperty="(help:ButtonAssist.UniformCornerRadius)"
                                          To="20"
                                          Duration="0:0:0.18" />
                                             </Storyboard>
@@ -102,7 +102,7 @@
                                     <DataTrigger.ExitActions>
                                         <BeginStoryboard>
                                             <Storyboard>
-                                                <DoubleAnimation Storyboard.TargetProperty="(core:ButtonAssist.UniformCornerRadius)"
+                                                <DoubleAnimation Storyboard.TargetProperty="(help:ButtonAssist.UniformCornerRadius)"
                                          From="20"
                                          Duration="0:0:0.18" />
                                             </Storyboard>

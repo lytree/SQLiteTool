@@ -1,8 +1,4 @@
-﻿
-
-
-
-using SQLiteTool.ViewModels;
+﻿using SQLiteTool.ViewModels;
 using System.Windows.Controls;
 
 namespace SQLiteTool.Views

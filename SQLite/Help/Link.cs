@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics;
 using System.Runtime.InteropServices;
 
-namespace SQLiteTool.Core
+namespace SQLiteTool.Help
 {
     public static class Link
     {

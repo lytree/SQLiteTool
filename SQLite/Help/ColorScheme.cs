@@ -1,4 +1,4 @@
-﻿namespace SQLiteTool
+﻿namespace SQLiteTool.Core
 {
     enum ColorScheme
     {

@@ -1,40 +1,40 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <OutputType>WinExe</OutputType>
-    <TargetFramework>net6.0-windows</TargetFramework>
-    <Nullable>enable</Nullable>
-    <UseWPF>true</UseWPF>
-  </PropertyGroup>
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net6.0-windows7.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<UseWPF>true</UseWPF>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <None Remove="favicon.ico" />
-  </ItemGroup>
+	<ItemGroup>
+		<None Remove="favicon.ico" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0" />
-    <PackageReference Include="MaterialDesignColors" Version="2.0.9" />
-    <PackageReference Include="MaterialDesignThemes" Version="4.6.1" />
-    <PackageReference Include="MaterialDesignThemes.MahApps" Version="0.2.5" />
-    <PackageReference Include="MaterialDesignXaml.DialogsHelper" Version="1.0.4" />
-    <PackageReference Include="Microsoft.Data.Sqlite.Core" Version="7.0.0" />
-    <PackageReference Include="MySql.Data" Version="8.0.31" />
-    <PackageReference Include="MySqlConnector" Version="2.1.13" />
-    <PackageReference Include="ShowMeTheXAML" Version="2.0.0" />
-    <PackageReference Include="ShowMeTheXAML.AvalonEdit" Version="2.0.0" />
-    <PackageReference Include="ShowMeTheXAML.MSBuild" Version="2.0.0" />
-    <PackageReference Include="SQLitePCLRaw.core" Version="2.1.2" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0" />
+		<PackageReference Include="MaterialDesignColors" Version="2.0.9" />
+		<PackageReference Include="MaterialDesignThemes" Version="4.6.1" />
+		<PackageReference Include="MaterialDesignThemes.MahApps" Version="0.2.5" />
+		<PackageReference Include="MaterialDesignXaml.DialogsHelper" Version="1.0.4" />
+		<PackageReference Include="Microsoft.Data.Sqlite.Core" Version="7.0.0" />
+		<PackageReference Include="MySql.Data" Version="8.0.31" />
+		<PackageReference Include="MySqlConnector" Version="2.1.13" />
+		<PackageReference Include="ShowMeTheXAML" Version="2.0.0" />
+		<PackageReference Include="ShowMeTheXAML.AvalonEdit" Version="2.0.0" />
+		<PackageReference Include="ShowMeTheXAML.MSBuild" Version="2.0.0" />
+		<PackageReference Include="SQLitePCLRaw.core" Version="2.1.2" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Controls\" />
-    <Folder Include="Help\" />
-  </ItemGroup>
+	<ItemGroup>
+		<Folder Include="Controls\" />
+		<Folder Include="Core\" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <Resource Include="favicon.ico">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-  </ItemGroup>
+	<ItemGroup>
+		<Resource Include="favicon.ico">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Resource>
+	</ItemGroup>
 
 </Project>

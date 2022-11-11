@@ -72,314 +72,34 @@ public class MainWindowViewModel : ObservableObject
     public AnotherCommandImplementation MoveNextCommand { get; }
 
 
-
-
     private static IEnumerable<ToolItem> GenerateToolItems(ISnackbarMessageQueue snackbarMessageQueue)
     {
         if (snackbarMessageQueue is null)
             throw new ArgumentNullException(nameof(snackbarMessageQueue));
 
-        //yield return new ToolItem(
-        //    "Palette",
-        //    typeof(PaletteSelector),
-        //    new[]
-        //    {
-        //        DocumentationLink.WikiLink("Brush-Names", "Brushes"),
-        //        DocumentationLink.WikiLink("Custom-Palette-Hues", "Custom Palettes"),
-        //        DocumentationLink.WikiLink("Swatches-and-Recommended-Colors", "Swatches"),
-        //        DocumentationLink.DemoPageLink<PaletteSelector>("Demo View"),
-        //        DocumentationLink.DemoPageLink<PaletteSelectorViewModel>("Demo View Model"),
-        //        DocumentationLink.ApiLink<PaletteHelper>()
-        //    });
+
 
         yield return new ToolItem(
             "Color Tool",
             typeof(ColorTool),
             null
             );
+        yield return new ToolItem(
+            "CMSTool",
+            typeof(CMSTool),
+            null
+            );
+        yield return new ToolItem(
+            "BMSTool",
+            typeof(BMSTool),
+            null
+            );
+        yield return new ToolItem(
+            "TMSTool",
+            typeof(TMSTool),
+            null
+            );
 
-        //yield return new ToolItem(
-        //    "Buttons",
-        //    typeof(Buttons),
-        //    new[]
-        //    {
-        //        DocumentationLink.WikiLink("Button-Styles", "Buttons"),
-        //        DocumentationLink.DemoPageLink<Buttons>("Demo View"),
-        //        DocumentationLink.DemoPageLink<ButtonsViewModel>("Demo View Model"),
-        //        DocumentationLink.StyleLink("Button"),
-        //        DocumentationLink.StyleLink("PopupBox"),
-        //        DocumentationLink.ApiLink<PopupBox>()
-        //    });
-
-        //yield return new ToolItem(
-        //    "Toggles",
-        //    typeof(Toggles),
-        //    new[]
-        //    {
-        //        DocumentationLink.DemoPageLink<Toggles>(),
-        //        DocumentationLink.StyleLink("ToggleButton"),
-        //        DocumentationLink.StyleLink("CheckBox"),
-        //        DocumentationLink.ApiLink<Toggles>()
-        //    });
-
-        //yield return new ToolItem(
-        //    "Rating Bar",
-        //    typeof(RatingBar),
-        //    new[]
-        //    {
-        //        DocumentationLink.DemoPageLink<RatingBar>(),
-        //        DocumentationLink.StyleLink("RatingBar"),
-        //        DocumentationLink.ApiLink<RatingBar>()
-        //    });
-
-        //yield return new ToolItem(
-        //    "Fields",
-        //    typeof(Fields),
-        //    new[]
-        //    {
-        //        DocumentationLink.DemoPageLink<Fields>(),
-        //        DocumentationLink.StyleLink("TextBox")
-        //    });
-
-        //yield return new ToolItem(
-        //    "Fields line up",
-        //    typeof(FieldsLineUp),
-        //    new[]
-        //    {
-        //        DocumentationLink.DemoPageLink<FieldsLineUp>()
-        //    });
-
-        //yield return new ToolItem(
-        //    "ComboBoxes",
-        //    typeof(ComboBoxes),
-        //    new[]
-        //    {
-        //        DocumentationLink.DemoPageLink<ComboBoxes>(),
-        //        DocumentationLink.StyleLink("ComboBox")
-        //    });
-
-        //yield return new ToolItem(
-        //    "Pickers",
-        //    typeof(Pickers),
-        //    new[]
-        //    {
-        //        DocumentationLink.DemoPageLink<Pickers>(),
-        //        DocumentationLink.StyleLink("Clock"),
-        //        DocumentationLink.StyleLink("DatePicker"),
-        //        DocumentationLink.ApiLink<TimePicker>()
-        //    });
-
-        //yield return new ToolItem(
-        //    "Sliders",
-        //    typeof(Sliders),
-        //    new[]
-        //    {
-        //        DocumentationLink.DemoPageLink<Sliders>(),
-        //        DocumentationLink.StyleLink("Slider")
-        //    });
-
-        //yield return new ToolItem(
-        //    "Chips",
-        //    typeof(Chips),
-        //    new[]
-        //    {
-        //        DocumentationLink.DemoPageLink<Chips>(),
-        //        DocumentationLink.StyleLink("Chip"),
-        //        DocumentationLink.ApiLink<Chip>()
-        //    });
-
-        //yield return new ToolItem(
-        //    "Typography",
-        //    typeof(Typography),
-        //    new[]
-        //    {
-        //        DocumentationLink.DemoPageLink<Typography>(),
-        //        DocumentationLink.StyleLink("TextBlock")
-        //    })
-        //{
-        //    HorizontalScrollBarVisibilityRequirement = ScrollBarVisibility.Auto
-        //};
-
-        //yield return new ToolItem(
-        //    "Cards",
-        //    typeof(Cards),
-        //    new[]
-        //    {
-        //        DocumentationLink.DemoPageLink<Cards>(),
-        //        DocumentationLink.StyleLink("Card"),
-        //        DocumentationLink.ApiLink<Card>()
-        //    });
-
-        //yield return new ToolItem(
-        //    "Icon Pack",
-        //    typeof(IconPack),
-        //    new[]
-        //    {
-        //        DocumentationLink.DemoPageLink<IconPack>("Demo View"),
-        //        DocumentationLink.DemoPageLink<IconPackViewModel>("Demo View Model"),
-        //        DocumentationLink.ApiLink<PackIcon>()
-        //    },
-        //    new IconPackViewModel(snackbarMessageQueue))
-        //{
-        //    The icons view handles its own scrolling
-        //    HorizontalScrollBarVisibilityRequirement = ScrollBarVisibility.Disabled,
-        //    VerticalScrollBarVisibilityRequirement = ScrollBarVisibility.Disabled
-        //};
-
-        //yield return new ToolItem(
-        //    "Colour Zones",
-        //    typeof(ColorZones),
-        //    new[]
-        //    {
-        //        DocumentationLink.DemoPageLink<ColorZones>(),
-        //        DocumentationLink.ApiLink<ColorZone>()
-        //    });
-
-        //yield return new ToolItem(
-        //    "Lists",
-        //    typeof(Lists),
-        //    new[]
-        //    {
-        //        DocumentationLink.DemoPageLink<Lists>("Demo View"),
-        //        DocumentationLink.DemoPageLink<ListsAndGridsViewModel>("Demo View Model", "Domain"),
-        //        DocumentationLink.StyleLink("ListBox"),
-        //        DocumentationLink.StyleLink("ListView")
-        //    });
-
-        //yield return new ToolItem(
-        //    "Tabs",
-        //    typeof(Tabs),
-        //    new[]
-        //    {
-        //        DocumentationLink.DemoPageLink<Tabs>(),
-        //        DocumentationLink.StyleLink("TabControl")
-        //    });
-
-        //yield return new ToolItem(
-        //    "Trees",
-        //    typeof(Trees),
-        //new[]
-        //    {
-        //        DocumentationLink.DemoPageLink<Trees>("Demo View"),
-        //        DocumentationLink.DemoPageLink<TreesViewModel>("Demo View Model"),
-        //        DocumentationLink.StyleLink("TreeView")
-        //    });
-
-        //yield return new ToolItem(
-        //    "Data Grids",
-        //    typeof(DataGrids),
-        //    new[]
-        //    {
-        //        DocumentationLink.DemoPageLink<DataGrids>("Demo View"),
-        //        DocumentationLink.DemoPageLink<ListsAndGridsViewModel>("Demo View Model", "Domain"),
-        //        DocumentationLink.StyleLink("DataGrid")
-        //    });
-
-        //yield return new ToolItem(
-        //    "Expander",
-        //    typeof(Expander),
-        //    new[]
-        //    {
-        //        DocumentationLink.DemoPageLink<Expander>(),
-        //        DocumentationLink.StyleLink("Expander")
-        //    });
-
-        //yield return new ToolItem(
-        //    "Group Boxes",
-        //    typeof(GroupBoxes),
-        //    new[]
-        //    {
-        //        DocumentationLink.DemoPageLink<GroupBoxes>(),
-        //        DocumentationLink.StyleLink("GroupBox")
-        //    });
-
-        //yield return new ToolItem(
-        //    "Menus & Tool Bars",
-        //    typeof(MenusAndToolBars),
-        //    new[]
-        //    {
-        //        DocumentationLink.DemoPageLink<MenusAndToolBars>(),
-        //        DocumentationLink.StyleLink("Menu"),
-        //        DocumentationLink.StyleLink("ToolBar")
-        //    });
-
-        //yield return new ToolItem(
-        //    "Progress Indicators",
-        //    typeof(Progress),
-        //    new[]
-        //    {
-        //        DocumentationLink.DemoPageLink<Progress>(),
-        //        DocumentationLink.StyleLink("ProgressBar")
-        //    });
-
-        //yield return new ToolItem(
-        //    "Navigation Rail",
-        //    typeof(NavigationRail),
-        //    new[]
-        //    {
-        //        DocumentationLink.DemoPageLink<NavigationRail>("Demo View"),
-        //        DocumentationLink.StyleLink("TabControl"),
-        //    });
-
-        //yield return new ToolItem(
-        //    "Dialogs",
-        //    typeof(Dialogs),
-        //    new[]
-        //    {
-        //        DocumentationLink.WikiLink("Dialogs", "Dialogs"),
-        //        DocumentationLink.DemoPageLink<Dialogs>("Demo View"),
-        //        DocumentationLink.DemoPageLink<DialogsViewModel>("Demo View Model", "Domain"),
-        //        DocumentationLink.ApiLink<DialogHost>()
-        //    })
-        //{
-        //    HorizontalScrollBarVisibilityRequirement = ScrollBarVisibility.Auto
-        //};
-
-        //yield return new ToolItem(
-        //    "Drawer",
-        //    typeof(Drawers),
-        //    new[]
-        //    {
-        //        DocumentationLink.DemoPageLink<Drawers>("Demo View"),
-        //        DocumentationLink.ApiLink<DrawerHost>()
-        //    });
-
-        //yield return new ToolItem(
-        //    "Snackbar",
-        //    typeof(Snackbars),
-        //    new[]
-        //    {
-        //        DocumentationLink.WikiLink("Snackbar", "Snackbar"),
-        //        DocumentationLink.DemoPageLink<Snackbars>(),
-        //        DocumentationLink.StyleLink("Snackbar"),
-        //        DocumentationLink.ApiLink<Snackbar>(),
-        //        DocumentationLink.ApiLink<ISnackbarMessageQueue>()
-        //    })
-        //{
-        //    HorizontalScrollBarVisibilityRequirement = ScrollBarVisibility.Auto
-        //};
-
-        //yield return new ToolItem(
-        //    "Transitions",
-        //    typeof(Transitions),
-        //    new[]
-        //    {
-        //        DocumentationLink.WikiLink("Transitions", "Transitions"),
-        //        DocumentationLink.DemoPageLink<Transitions>(),
-        //        DocumentationLink.ApiLink<Transitioner>("Transitions"),
-        //        DocumentationLink.ApiLink<TransitionerSlide>("Transitions"),
-        //        DocumentationLink.ApiLink<TransitioningContent>("Transitions"),
-        //    });
-
-        //yield return new ToolItem(
-        //    "Elevation",
-        //    typeof(Elevation),
-        //    new[]
-        //    {
-        //        DocumentationLink.DemoPageLink<Elevation>(),
-        //        DocumentationLink.StyleLink("Shadows"),
-        //        DocumentationLink.SpecsLink("https://material.io/design/environment/elevation.html", "Elevation")
-        //    });
     }
 
 }

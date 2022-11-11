@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace SQLiteTool.Core
+namespace SQLiteTool.Help
 {
     public static class ButtonAssist
     {

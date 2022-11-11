@@ -5,7 +5,7 @@ using System.Windows.Media;
 using CommunityToolkit.Mvvm.ComponentModel;
 using MaterialDesignColors;
 using MaterialDesignThemes.Wpf;
-
+using SQLiteTool.Core;
 
 namespace SQLiteTool.ViewModels
 {
